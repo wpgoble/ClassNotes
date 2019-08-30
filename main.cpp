@@ -12,27 +12,25 @@ int main()
 	cout << "The fraction f1 is ";
 	f1.Show();
 
-	cout << "\n The fraction f1 is ";
+	cout << "\nThe fraction f1 is ";
 	f2.Show();
 
-	cout << "\n The fraction f1 is ";
+	cout << "\nThe fraction f1 is ";
 	f3.Show();
 
-	cout << "\n The fraction f1 is ";
+	cout << "\nThe fraction f1 is ";
 	f4.Show();
 
-	cout << "\n Now enter your first fraction ";
+	cout << "\nNow enter your first fraction ";
 	f1.Input();
-	cout << "\n You entered: ";
-	f1.Show();
+	cout << "\nYou entered: " << f1;
 
-	cout << "\n Now enter your second fraction ";
-	f2.Input();
-	cout << "\n You entered: ";
-	f2.Show();
+	cout << "\nNow enter your second fraction ";
+	cin >> f2;
+	cout << "\nYou entered: " << f2;
 
-	cout << "\n The value of fraction 1 is" << f1.Evaluate() << '\n';
-	cout << "\n The value of fraction 2 is" << f2.Evaluate() << '\n';
+	cout << "\nThe value of fraction 1 is " << f1.Evaluate() << '\n';
+	cout << "\nThe value of fraction 2 is " << f2.Evaluate() << '\n';
 
 	cout << "Goodbye!\n";
 
