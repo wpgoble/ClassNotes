@@ -22,17 +22,17 @@ int main()
 	f4.Show();
 
 	cout << "\nNow enter your first fraction ";
-	f1.Input();
+	cin >> f1;
 	cout << "\nYou entered: " << f1;
 
 	cout << "\nNow enter your second fraction ";
 	cin >> f2;
 	cout << "\nYou entered: " << f2;
 
-	cout << "\nThe value of fraction 1 is " << f1.Evaluate() << '\n';
-	cout << "\nThe value of fraction 2 is " << f2.Evaluate() << '\n';
+	cout << "\nThe value of fraction 1 is " << f1.Evaluate();
+	cout << "\nThe value of fraction 2 is " << f2.Evaluate();
 
-	cout << "Goodbye!\n";
+	cout << "\nGoodbye!\n";
 
 	return 0;
 }
