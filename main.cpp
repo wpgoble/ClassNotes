@@ -9,7 +9,7 @@ int main()
 	Fraction f1, f2;
 	Fraction f3(3, 4), f4(6);
 
-	cout << "\n The fraction f1 is ";
+	cout << "The fraction f1 is ";
 	f1.Show();
 
 	cout << "\n The fraction f1 is ";
@@ -21,12 +21,12 @@ int main()
 	cout << "\n The fraction f1 is ";
 	f4.Show();
 
-	cout << "\n Now enter your first fraction";
+	cout << "\n Now enter your first fraction ";
 	f1.Input();
 	cout << "\n You entered: ";
 	f1.Show();
 
-	cout << "\n Now enter your second fraction";
+	cout << "\n Now enter your second fraction ";
 	f2.Input();
 	cout << "\n You entered: ";
 	f2.Show();
