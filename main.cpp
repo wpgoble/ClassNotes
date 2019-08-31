@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "frac.h"
 
 using namespace std;
@@ -6,10 +7,17 @@ using namespace std;
 int main()
 {
 
-	Fraction f1, f2;
-	Fraction f3(3, 4), f4(6);
+	Fraction f1{}, f2{};
+	Fraction f3{3, 4}, f4{6};
+	int array[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
 
-	cout << "The fraction f1 is ";
+	for(int i : array)
+	{
+		cout << i << ' ';
+	}
+
+
+	cout << "\nThe fraction f1 is ";
 	f1.Show();
 
 	cout << "\nThe fraction f1 is ";
