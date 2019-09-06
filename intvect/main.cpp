@@ -10,14 +10,17 @@ int main()
    int list1[15] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
    int list2[8] = {100,200,300,400,500,600,700,800};
 
+   cout << "Precheck: " << v1 << '\n';
+
    for (int i = 0; i < 15; i++)
-	v1.Insert(list1[i]);
+   	v1.Insert(list1[i]);
 
    for (int i = 0; i < 8; i++)
-	v2.Insert(list2[i]);
+	  v2.Insert(list2[i]);
+
    cout << "CHECKPOINT A\n";
 
-   IntVector v3 = v1;			// copy constructor
+   IntVector v3 = v1;			            // copy constructor
    IntVector v4 {2, 4, 6, 8, 10, 12, 14};	// initializer list constructor
 
    cout << "v1 = " << v1 << '\n';

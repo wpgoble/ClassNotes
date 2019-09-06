@@ -14,11 +14,11 @@ using std::cout;
 ostream& operator<< (ostream& os, const IntVector& v)
 {
    if (v.size == 0)
-	return os << "Empty vector";
+   	return os << "Empty vector";
 
    // otherwise
-   os << "{" << v.arr[0];
-   for (int i = 1; i < v.size; i++)
+   os << "{" << v.arr[0];              // prints the frist element in order to add the 
+   for (int i = 1; i < v.size; i++)    // comma in the printed list
       os << ", " << v.arr[i];
 
    return os << "}";
@@ -28,27 +28,29 @@ IntVector operator+(const IntVector& v1, const IntVector& v2)
 {
    int newsize = v1.size + v2.size;
    IntVector result(newsize + 5);	// allocate
+   
    for (int i = 0; i < v1.size; i++)
-	result.Insert(v1.arr[i]);
+	  result.Insert(v1.arr[i]);     //adds data on the end of the list
    for (int i = 0; i < v2.size; i++)
-	result.Insert(v2.arr[i]);
+	  result.Insert(v2.arr[i]);     //adds data on the end of the list
+   
    return result;
 }
 
 IntVector::IntVector()
 // default vector will have 10 capacity, 0 entries
 {
-   max = 10;			// default capacity
-   size = 0;			// no items yet
+   max = 10;			      // default capacity
+   size = 0;			      // no items yet
    arr = new int[max];		// starting allocation
 }
 
 IntVector::IntVector(unsigned int c)
 // starting vector is c capacity, 0 entries
 {
-   max = c;			// default capacity
-   size = 0;			// no items yet
-   arr = new int[max];		// starting allocation
+   max = c;			          // default capacity
+   size = 0;			       // no items yet
+   arr = new int[max];		 // starting allocation
 }
 
 //Read this!
@@ -65,8 +67,8 @@ IntVector::IntVector(initializer_list<int> list)
 
 IntVector::~IntVector()
 {
-   if (arr != 0)	// if not null pointer
-      delete [] arr;	// clean up
+   if (arr != 0)	    // if not null pointer
+      delete [] arr;	 // clean up
 }
 
 IntVector::IntVector(const IntVector& v)
@@ -116,9 +118,9 @@ IntVector& IntVector::operator=(IntVector&& v)
 
 void IntVector::Insert(int val)
 {
-   if (max == size)		// if vector full
-	Resize(size + 10);	// increase allocation
-   arr[size] = val;		// insert val into array
+   if (max == size)		   // if vector full
+   	Resize(size + 10);	// increase allocation
+   arr[size] = val;		   // insert val into array
    size++;
 }
 
